@@ -1,5 +1,6 @@
 <template>
     <li class="list-group-item">
+        <a href="javascript:;" @click="testPS">测试发布订阅</a>
         <div class="handle">
             <a href="javascript:;" @click="deleteItem">删除</a>
         </div>
@@ -9,6 +10,7 @@
 </template>
 
 <script>
+    import Pubsub from 'pubsub-js'
     export default {
         props: ['item','deleteComment','index'],
         methods:{
@@ -17,8 +19,11 @@
                 if (window.confirm('确定要删除' + item.userName + '吗')) {
                     deleteComment(index)
                 }
+            },
+            testPS(){
+                Pubsub.publish('testPubsub','hello pubsub');
             }
-        }
+        },
     }
 </script>
 

@@ -21,6 +21,9 @@
 <script>
     import Add from './components/Add'
     import List from './components/List'
+    import PubSub from 'pubsub-js'
+    //绑定事件监听---订阅消息
+    //触发事件---发布消息
 
     export default {
         components: {Add, List},
@@ -39,6 +42,11 @@
             deleteComment(index) {
                 this.comments.splice(index, 1);
             }
+        },
+        mounted() {
+            PubSub.subscribe('testPubsub',function (msg, data) {
+                alert(msg+'------'+data)
+            })
         }
     }
 </script>

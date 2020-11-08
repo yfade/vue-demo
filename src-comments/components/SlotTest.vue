@@ -1,7 +1,9 @@
 <template>
     <div>
         <div id="div1">
-            <slot name="header"></slot>
+            <slot name="header" :user="user">
+                {{user.lastName}}
+            </slot>
         </div>
         <div id="div2">
             <slot name="main"></slot>
@@ -16,7 +18,16 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        data() {
+            return {
+                user: {
+                    firstName: 'wc',
+                    lastName: 'ps'
+                }
+            }
+        }
+    }
 </script>
 
 <style>

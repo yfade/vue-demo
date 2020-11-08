@@ -18,7 +18,7 @@
 
         <!--测试插槽-->
         <SlotTest>
-            <template v-slot:header>aaaaaaaaaaa</template>
+            <template v-slot:header="sp">{{sp.user.firstName}}</template>
             <template v-slot:footer>ccc</template>
             <template v-slot:main>bbb</template>
             <p>ddddddd</p>

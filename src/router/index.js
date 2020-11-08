@@ -21,6 +21,8 @@ import About from '../views/About'
 import Home from '../views/Home'
 import News from '../views/News'
 import Message from '../views/Message'
+import ParamTest from '../views/ParamTest'
+import QueryTest from '../views/QueryTest'
 
 Vue.use(VueRouter);
 
@@ -40,9 +42,21 @@ export default new VueRouter({
                 },
                 {
                     path: 'message/:id',
-                    component: Message
+                    component: Message,
+                    props: true
                 }
             ]
+        },
+        {
+            path: '/paramtest',
+            name: 'ParamTest',
+            component: ParamTest,
+            props: true
+        },
+        {
+            path: '/querytest',
+            component: QueryTest,
+            props:true
         },
         {
             path: '/',

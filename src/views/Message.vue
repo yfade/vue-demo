@@ -1,12 +1,15 @@
 <template>
     <div>
         <div>Message</div>
-        <div>{{$route.params.id}}</div>
+        <div>{{id}}</div>
     </div>
 </template>
 
 <script>
-    export default {}
+    export default {
+        name:'message',
+        props:['age']
+    }
 </script>
 
 <style>

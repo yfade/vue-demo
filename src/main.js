@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from '../src-comments/App'
+import App from './App'
 import router from './router/index'
 
 new Vue({

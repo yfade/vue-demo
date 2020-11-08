@@ -12,7 +12,7 @@
     export default {
         methods: {
             toMessage(id) {
-                this.$router.push('/home/message/' + id);
+                this.$router.push(`/home/message/${id}`);
             }
         }
     }
